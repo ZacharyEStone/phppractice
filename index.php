@@ -91,10 +91,29 @@ echo evaluator(5,2)."<p>";
 
 //String Length Function
 function stringcounter($stringer){
-	strlen ($stringer);
+	return strlen ($stringer);
 }
 
-echo stringcounter("Zach is the greatest PHPer in Praxis History");
+echo stringcounter("Zach is the greatest PHPer in Praxis History")."<p>";
+
+//String Reversal
+function stringreverser($string){
+	return strrev($string);
+}
+
+echo stringreverser("Zach is the greatest PHPer in Praxis History")."<p>";
+
+//String Exploder
+function stringexploder($string){
+	return explode(" ", $string);
+}
+
+$parsed = stringexploder("Zach is the greatest PHPer in Praxis History");
+
+foreach($parsed as $part) {
+	echo "<ul>".$part."</ul>";
+}
+
 ?> 
 
 <ol>
